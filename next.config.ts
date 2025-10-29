@@ -3,8 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/website",
-  assetPrefix: "/website",
+  basePath: "",
+  assetPrefix: "",
 };
 
 export default nextConfig;
