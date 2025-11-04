@@ -25,7 +25,7 @@ export default async function Home() {
     <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto">
       {/* Profile image */}
       {data?.profilePictureUrl && (
-        <div className="flex-shrink-0 border-2 border-accent-foreground p-1 rounded-lg shadow-lg bg-background/30">
+        <div className="flex-shrink-0 border-2 border-accent-foreground p-1 rounded-lg shadow-lg bg-gray-800 w-72 h-72 overflow-hidden">
           <Image
             alt="Profile"
             // @ts-expect-error type mismatch
@@ -34,7 +34,7 @@ export default async function Home() {
             height={288}
             priority             // preload for faster LCP
             unoptimized          // required for static export
-            className="rounded-md object-cover w-72 h-auto"
+            className="rounded-md object-cover w-full h-full"
           />
         </div>
       )}
