@@ -162,6 +162,40 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+
+  /* Custom variables */
+  --breakpoint-tablet: 640px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1280px;
+
+  /* Category and Tag colors */
+  --color-category-1: var(--color-chart-1);
+  --color-category-2: var(--color-chart-2);
+  --color-category-3: var(--color-chart-3);
+  --color-category-4: var(--color-chart-4);
+  --color-category-5: var(--color-chart-5);
+  --color-tag-1: var(--color-chart-1);
+  --color-tag-2: var(--color-chart-2);
+  --color-tag-3: var(--color-chart-3);
+  --color-tag-4: var(--color-chart-4);
+  --color-tag-5: var(--color-chart-5);
+
+  /* RTE Editor colors */
+  --color-rte-text-1: var(--color-chart-1);
+  --color-rte-text-2: var(--color-chart-2);
+  --color-rte-text-3: var(--color-chart-3);
+  --color-rte-text-4: var(--color-chart-4);
+  --color-rte-text-5: var(--color-chart-5);
+  --color-rte-text-background-1: var(--color-chart-1);
+  --color-rte-text-background-2: var(--color-chart-2);
+  --color-rte-text-background-3: var(--color-chart-3);
+  --color-rte-text-background-4: var(--color-chart-4);
+  --color-rte-text-background-5: var(--color-chart-5);
+  --color-rte-highlight-1: var(--color-chart-1);
+  --color-rte-highlight-2: var(--color-chart-2);
+  --color-rte-highlight-3: var(--color-chart-3);
+  --color-rte-highlight-4: var(--color-chart-4);
+  --color-rte-highlight-5: var(--color-chart-5);
 }
 
 @layer base {

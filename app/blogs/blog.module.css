@@ -1,0 +1,51 @@
+@reference "../globals.css";
+
+.rteFormStyles {
+  a {
+    @apply text-primary underline cursor-pointer;
+  }
+
+  p {
+    @apply text-sm;
+  }
+
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+
+  h3 {
+    @apply text-lg font-bold;
+  }
+
+  ul {
+    @apply list-inside list-disc;
+
+    li {
+      & > p {
+        @apply inline;
+      }
+    }
+
+    ul {
+      @apply list-inside list-disc mt-0.5 ml-3;
+    }
+  }
+
+  ol {
+    @apply list-inside list-decimal;
+
+    li {
+      & > p {
+        @apply inline;
+      }
+    }
+
+    ol {
+      @apply list-inside list-decimal mt-0.5 ml-3;
+    }
+  }
+}

@@ -26,11 +26,12 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "@piperunner-cms/components": "1.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@piperunner-cms/types": "^1.1.5",
+    "@piperunner-cms/types": "1.2.1",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",

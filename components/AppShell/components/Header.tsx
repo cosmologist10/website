@@ -16,10 +16,14 @@ export default async function Header() {
         <nav className="flex items-center gap-4 text-sm font-medium">
           <Link href="/">HOME</Link>/
           {data?.linkedin && (
-            <Link target="_blank" href={data.linkedin}>
-              RESUME
-            </Link>
+            <>
+              <Link target="_blank" href={data.linkedin}>
+                RESUME
+              </Link>
+              /
+            </>
           )}
+          <Link href="/blogs">BLOGS</Link>
         </nav>
         <ThemeSwitch />
       </div>
