@@ -8,8 +8,8 @@ export default async function Header() {
   const { latest: data } = await getSocialLinks();
 
   return (
-    <header className="header">
-      <Avatar className="z-3 bg-card border-muted-foreground border-[1px] size-12">
+    <header className="header z-3">
+      <Avatar className="z-3 bg-card border-muted-foreground border size-12">
         <AvatarImage alt="logo" src="/images/logo.webp" />
       </Avatar>
       <div className="space-x-3 flex">

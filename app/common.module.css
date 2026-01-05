@@ -1,0 +1,177 @@
+@reference "./globals.css";
+
+.rteDocumentStyles {
+  a {
+    @apply text-primary underline cursor-pointer;
+  }
+
+  p {
+    @apply text-base;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-xl font-bold;
+  }
+
+  blockquote {
+    @apply border-l-3 bg-primary/10 border-primary pl-4 py-2 my-1 text-muted-foreground;
+  }
+
+  ul {
+    @apply list-inside list-disc;
+
+    li {
+      & > p {
+        @apply inline;
+      }
+    }
+
+    ul {
+      @apply list-inside list-disc mt-0.5 ml-3;
+    }
+  }
+
+  ol {
+    @apply list-inside list-decimal;
+
+    li {
+      & > p {
+        @apply inline;
+      }
+    }
+
+    ol {
+      @apply list-inside list-decimal mt-0.5 ml-3;
+    }
+  }
+
+  hr {
+    @apply border-t my-4 border-border;
+  }
+
+  iframe {
+    @apply h-full w-full border-0;
+  }
+
+  :global(.details) {
+    @apply border border-accent rounded-lg flex p-1 gap-1;
+
+    button {
+      @apply border border-accent rounded-lg cursor-pointer hover:bg-accent-foreground/10 flex justify-center items-center h-6 aspect-square;
+
+      &::before {
+        content: "▶";
+      }
+    }
+
+    &:global(.is-open) > button::before {
+      transform: rotate(90deg);
+    }
+
+    div {
+      @apply flex-1;
+
+      summary {
+        @apply list-none h-6 flex items-center;
+      }
+
+      [data-type="detailsContent"] {
+        @apply mt-1;
+      }
+    }
+  }
+
+  :global(.block-code) {
+    & > div:first-child {
+      @apply rounded-lg p-2 border-accent border;
+
+      & > pre {
+        @apply p-2;
+      }
+    }
+  }
+
+  :global(.inline-code) {
+    @apply bg-secondary rounded-lg px-1 font-mono;
+  }
+
+  :global(.advanced-table) {
+    td {
+      @apply border !border-muted-foreground relative;
+    }
+
+    :global(.column-resize-handle) {
+      @apply bg-muted-foreground w-1 z-10 absolute pointer-events-none -top-[1.5px] -right-[2.5px] -bottom-[1px];
+    }
+  }
+
+  > * + :not(p) {
+    @apply mt-4;
+  }
+
+  > * + p {
+    @apply mt-1;
+  }
+}
+
+.rteFormStyles {
+  a {
+    @apply text-primary underline cursor-pointer;
+  }
+
+  p {
+    @apply text-sm;
+  }
+
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+
+  h3 {
+    @apply text-lg font-bold;
+  }
+
+  ul {
+    @apply list-inside list-disc;
+
+    li {
+      & > p {
+        @apply inline;
+      }
+    }
+
+    ul {
+      @apply list-inside list-disc mt-0.5 ml-3;
+    }
+  }
+
+  ol {
+    @apply list-inside list-decimal;
+
+    li {
+      & > p {
+        @apply inline;
+      }
+    }
+
+    ol {
+      @apply list-inside list-decimal mt-0.5 ml-3;
+    }
+  }
+}

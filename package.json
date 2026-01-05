@@ -13,10 +13,6 @@
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-slot": "^1.2.3",
-    "@tiptap/core": "^3.2.0",
-    "@tiptap/react": "^3.2.0",
-    "@tiptap/starter-kit": "^3.2.0",
-    "@tiptap/static-renderer": "^3.2.0",
     "axios": "^1.11.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -27,11 +23,11 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "tailwind-merge": "^3.3.1",
-    "@piperunner-cms/components": "1.2.1"
+    "@piperunner-cms/components": "1.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@piperunner-cms/types": "1.2.1",
+    "@piperunner-cms/types": "1.3.0",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
