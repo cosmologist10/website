@@ -1,12 +1,6 @@
 import { getSocialLinks } from "@/app/api/essentials.route";
 import Link from "next/link";
-import {
-  FaGithub as GithubIcon,
-  FaLinkedin as LinkedInIcon,
-  FaMedium as MediumIcon,
-  FaInstagram as InstagramIcon,
-  FaTwitter as TwitterIcon,
-} from "react-icons/fa";
+import { FaLinkedin as LinkedInIcon } from "react-icons/fa";
 
 export default async function Footer() {
   const { latest: data } = await getSocialLinks();
@@ -20,29 +14,9 @@ export default async function Footer() {
       </div>
 
       <div className="flex gap-4">
-        {data?.github && (
-          <Link href={data?.github}>
-            <GithubIcon className="size-6" />
-          </Link>
-        )}
-        {data?.twitter && (
-          <Link href={data?.twitter}>
-            <TwitterIcon className="size-6" />
-          </Link>
-        )}
         {data?.linkedin && (
           <Link href={data?.linkedin}>
             <LinkedInIcon className="size-6" />
-          </Link>
-        )}
-        {data?.medium && (
-          <Link href={data?.medium}>
-            <MediumIcon className="size-6" />
-          </Link>
-        )}
-        {data?.instagram && (
-          <Link href={data?.instagram}>
-            <InstagramIcon className="size-6" />
           </Link>
         )}
       </div>
