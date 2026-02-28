@@ -93,8 +93,6 @@ export default async function Blog({ params }: BlogProps) {
                 </span>
               </div>
               <div className="hidden tablet:block flex-1 h-[3px] bg-primary/70 rounded-lg" />
-
-              <div className="hidden tablet:block flex-1 h-[3px] bg-primary/70 rounded-lg" />
               <div className="flex items-center space-x-2">
                 <UpdatedAtIcon className="stroke-green-200" />
                 <span>
@@ -118,7 +116,7 @@ export default async function Blog({ params }: BlogProps) {
               <RTERenderer
                 content={blog.latest.content}
                 type="document"
-                className={cn(styles.rteDocumentStyles, "max-w-3xl mx-auto")}
+                className={cn(styles.rteDocumentStyles, "max-w-4xl mx-auto")}
               />
             )}
           </div>
