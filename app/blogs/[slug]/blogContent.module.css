@@ -2,11 +2,11 @@
 
 .rteDocumentStyles {
   a {
-    @apply text-primary underline cursor-pointer;
+    @apply text-primary underline cursor-pointer break-words;
   }
 
   img {
-    @apply max-w-full h-auto;
+    @apply max-w-full h-auto mx-auto block;
   }
 
   p {

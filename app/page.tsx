@@ -1,6 +1,6 @@
 import { getBio } from "./api/essentials.route";
 import { LazyImage, RTERenderer } from "@piperunner-cms/components";
-import { cn } from "@/lib/utils";
+import styles from "./common.module.css";
 
 export default async function Home() {
   const { latest: data } = await getBio();
@@ -16,7 +16,7 @@ export default async function Home() {
             src={data.profilePictureUrl.url}
             placeholder={data.profilePictureUrl.placeholder}
             alt="cover"
-            className="aspect-square size-72 float-right p-2 border-accent-foreground border-2 rounded-lg"
+            className="aspect-square size-72 p-2 border-accent-foreground border-2 rounded-lg"
           />
         )}
 
@@ -26,7 +26,7 @@ export default async function Home() {
           <div className="max-w-xl">
             <RTERenderer
               content={data.bio}
-              className={cn("prose dark:prose-invert text-foreground")}
+              className={styles.rteFormStyles}
               type="form"
             />
           </div>

@@ -58,7 +58,7 @@ export default async function Blog({ params }: BlogProps) {
 
           {((blog.latest.tags && blog.latest.tags?.length > 0) ||
             blog.latest.category) && (
-            <div className="flex flex-wrap items-center gap-2 mb-3">
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
               <div
                 className="text-md font-semibold capitalize border px-2 rounded-full"
                 style={{
@@ -88,17 +88,17 @@ export default async function Blog({ params }: BlogProps) {
               <div className="flex items-center space-x-2">
                 <CreatedAtIcon className="fill-yellow-200" />
                 <span>
-                  {createdAt.getDate()} / {createdAt.getMonth()} /
+                  {createdAt.getDate()} / {createdAt.getMonth() + 1} /
                   {createdAt.getFullYear()}
                 </span>
               </div>
-              <div className="hidden tablet:block flex-1 h-[3px] bg-brand/70 rounded-lg" />
+              <div className="hidden tablet:block flex-1 h-[3px] bg-primary/70 rounded-lg" />
 
-              <div className="hidden tablet:block flex-1 h-[3px] bg-brand/70 rounded-lg" />
+              <div className="hidden tablet:block flex-1 h-[3px] bg-primary/70 rounded-lg" />
               <div className="flex items-center space-x-2">
                 <UpdatedAtIcon className="stroke-green-200" />
                 <span>
-                  {updatedAt.getDate()} / {updatedAt.getMonth()} /
+                  {updatedAt.getDate()} / {updatedAt.getMonth() + 1} /
                   {updatedAt.getFullYear()}
                 </span>
               </div>
@@ -107,7 +107,7 @@ export default async function Blog({ params }: BlogProps) {
             <div
               className={cn(
                 "mb-6 mt-3 mx-auto",
-                "h-[3px] w-[100px] rounded-sm bg-brand/70"
+                "h-[3px] w-[100px] rounded-sm bg-primary/70"
               )}
             />
           </div>
@@ -118,7 +118,7 @@ export default async function Blog({ params }: BlogProps) {
               <RTERenderer
                 content={blog.latest.content}
                 type="document"
-                className={cn(styles.rteDocumentStyles, "max-w-7xl mx-auto")}
+                className={cn(styles.rteDocumentStyles, "max-w-3xl mx-auto")}
               />
             )}
           </div>
