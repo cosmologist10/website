@@ -12,7 +12,7 @@ export default async function Footer() {
   const { latest: data } = await getSocialLinks();
 
   return (
-    <footer className="z-2 p-4 footer flex justify-between">
+    <footer className="z-2 p-4 footer flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
       <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
         <div>{data?.email}</div>
         <div>{` • `}</div>

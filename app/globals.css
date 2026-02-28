@@ -203,7 +203,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
 
     /* CUSTOM VARIABLES */
     --header-height: 72px;
@@ -213,7 +213,7 @@
 
 @layer components {
   .header {
-    @apply bg-accent text-accent-foreground h-(--header-height) border-b border-border sticky top-0 left-0 right-0 flex items-center justify-between px-4 space-x-4;
+    @apply bg-accent text-accent-foreground h-(--header-height) border-b border-border sticky top-0 left-0 right-0 flex items-center justify-between px-4 space-x-4 z-50;
   }
 
   .main {

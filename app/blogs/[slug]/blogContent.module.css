@@ -5,6 +5,10 @@
     @apply text-primary underline cursor-pointer;
   }
 
+  img {
+    @apply max-w-full h-auto;
+  }
+
   p {
     @apply text-base;
   }
@@ -91,7 +95,7 @@
 
   :global(.block-code) {
     & > div:first-child {
-      @apply rounded-lg p-2 border-accent border;
+      @apply rounded-lg p-2 border-accent border overflow-x-auto;
 
       & > pre {
         @apply p-2;
