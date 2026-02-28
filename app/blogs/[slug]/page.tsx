@@ -52,15 +52,15 @@ export default async function Blog({ params }: BlogProps) {
       )}
       <Card className="max-w-desktop mx-auto">
         <CardHeader>
-          <div className="text-7xl text-center font-alt-serif font-bold leading-snug">
+          <div className="text-3xl sm:text-5xl md:text-7xl text-center font-alt-serif font-bold leading-snug">
             {blog.latest.title}
           </div>
 
           {((blog.latest.tags && blog.latest.tags?.length > 0) ||
             blog.latest.category) && (
-            <div className="flex items-end justify-between space-x-4 mb-3">
+            <div className="flex flex-wrap items-center gap-2 mb-3">
               <div
-                className="text-md font-semibold capitalize ml-auto w-fit border px-2 rounded-full"
+                className="text-md font-semibold capitalize border px-2 rounded-full"
                 style={{
                   borderColor: blog.latest.category?.metadata?.color ?? "",
                   color: blog.latest.category?.metadata?.color ?? "",
@@ -68,18 +68,18 @@ export default async function Blog({ params }: BlogProps) {
               >
                 {blog.latest.category?.name}
               </div>
-              <div className="flex-1" />
-              <div className="flex flex-wrap gap-2">
-                {blog.latest.tags?.map((tag) => (
-                  <div
-                    key={tag.id}
-                    className="text-md capitalize ml-auto w-fit"
-                    style={{ color: tag.metadata?.color ?? "" }}
-                  >
-                    #{tag.name}
-                  </div>
-                ))}
-              </div>
+              {blog.latest.tags?.map((tag) => (
+                <div
+                  key={tag.id}
+                  className="text-md capitalize border rounded-xl px-2"
+                  style={{
+                    color: tag.metadata?.color ?? "",
+                    borderColor: tag.metadata?.color ?? "",
+                  }}
+                >
+                  #{tag.name}
+                </div>
+              ))}
             </div>
           )}
 

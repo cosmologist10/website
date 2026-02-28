@@ -13,10 +13,10 @@ export const BlogList: React.FC<BlogListProps> = ({ data }) => {
   return (
     <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-6 max-w-7xl mx-auto">
       {data.map((blog) => (
-        <Link href={`/blogs/${blog.slug}`} key={blog.id}>
+        <Link href={`/blogs/${blog.slug}`} key={blog.id} className="h-full">
           <Card
             key={blog.id}
-            className="py-0 overflow-hidden relative border border-border hover:border-primary transition-all"
+            className="py-0 overflow-hidden relative border border-border hover:border-primary transition-all h-full"
           >
             {blog.latest.coverImage?.url && (
               <LazyImage
@@ -40,7 +40,7 @@ export const BlogList: React.FC<BlogListProps> = ({ data }) => {
                     type="form"
                   />
                 )}
-                <div className="flex justify-between mt-3">
+                <div className="flex flex-wrap gap-2 mt-3">
                   <div
                     className="border rounded-full px-2"
                     style={{
@@ -51,20 +51,18 @@ export const BlogList: React.FC<BlogListProps> = ({ data }) => {
                     {blog.latest.category?.name}
                   </div>
 
-                  <div className="flex space-x-2">
-                    {blog.latest.tags?.map((tag) => (
-                      <div
-                        key={tag.id}
-                        className="border rounded-xl px-2"
-                        style={{
-                          color: tag.metadata?.color ?? "",
-                          borderColor: tag.metadata?.color ?? "",
-                        }}
-                      >
-                        # {tag.name}
-                      </div>
-                    ))}
-                  </div>
+                  {blog.latest.tags?.map((tag) => (
+                    <div
+                      key={tag.id}
+                      className="border rounded-xl px-2"
+                      style={{
+                        color: tag.metadata?.color ?? "",
+                        borderColor: tag.metadata?.color ?? "",
+                      }}
+                    >
+                      #{tag.name}
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </div>
